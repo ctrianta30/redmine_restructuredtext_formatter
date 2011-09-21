@@ -11,6 +11,14 @@
       div.line-block { display: block }
       div.line-block div.line-block { margin-left: 1.5em }
 
+.underline {
+    text-decoration: underline;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
 /* Tables */
 div.wiki table, div.wiki td, 
 div.wiki th {
@@ -233,7 +241,7 @@ table.docutils th.field-name, table.docinfo th.docinfo-name {
 <td class="src">
 <pre>
 **太字** 、 *イタリック* 、
-:underline:`下線` :strike:`取り消し線` 
+:underline:`下線` 、 :strike:`取り消し線` 
 
 ::
 
@@ -249,7 +257,7 @@ table.docutils th.field-name, table.docinfo th.docinfo-name {
 </pre>
 </td>
 <td>
-<strong>太字</strong> 、 <em>イタリック</em> 、 <span class="underline">下線</span> <span class="strike">取り消し線</span></p>
+<strong>太字</strong> 、 <em>イタリック</em> 、 <span class="underline">下線</span> 、 <span class="strike">取り消し線</span></p>
 <pre class="literal-block">
 //ソースコード(preタグ)
 for(int i=0;i&lt;10;i++){
