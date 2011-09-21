@@ -5,7 +5,7 @@ module RedmineRestructuredtextFormatter
     def wikitoolbar_for(field_id)
       heads_for_wiki_formatter
       url = Redmine::Utils.relative_url_root +
-        Engines::RailsExtensions::AssetHelpers.plugin_asset_path('redmine_restructuredtext_formatter', 'help', 'restructuredtext_syntax.html')
+        Engines::RailsExtensions::AssetHelpers.plugin_asset_path('redmine_restructuredtext_formatter', 'help', 'restructuredtext_syntax.ja.html')
       help_link = l(:setting_text_formatting) + ': ' +
         link_to(l(:label_help), url,
         :onclick => "window.open(\"#{url}\", \"\", \"resizable=yes, location=no, width=300, height=640, menubar=no, status=no, scrollbars=yes\"); return false;")
