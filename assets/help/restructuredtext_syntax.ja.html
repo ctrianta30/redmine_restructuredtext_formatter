@@ -137,46 +137,51 @@ Formatterプラグインを利用したWiki文法のマニュアルです。reSt
 <tr>
 <td class="src">
 <pre>
-* 箇条書き1
+* レベル1-1
+* レベル1-2
+  これは、レベル1-2の続きです。
+* レベル1-3
 
-* 箇条書き2
+ * レベル2-1
+ * レベル2-1
 
- * レベル2
+  * レベル3-1
 
-  * レベル3
+* レベル1-4
 
-* 箇条書き
+ - レベル2-3
 
- - レベル2
-
-  + レベル3
+  + レベル3-2
 </pre>
 </td>
 <td>
 <ul class="simple">
-<li>箇条書き1</li>
-<li>箇条書き2</li>
+<li>レベル1-1</li>
+<li>レベル1-2
+これは、レベル1-2の続きです。</li>
+<li>レベル1-3</li>
 </ul>
 <blockquote>
 <ul class="simple">
-<li>レベル2</li>
+<li>レベル2-1</li>
+<li>レベル2-1</li>
 </ul>
 <blockquote>
 <ul class="simple">
-<li>レベル3</li>
+<li>レベル3-1</li>
 </ul>
 </blockquote>
 </blockquote>
 <ul class="simple">
-<li>箇条書き</li>
+<li>レベル1-4</li>
 </ul>
 <blockquote>
 <ul class="simple">
-<li>レベル2</li>
+<li>レベル2-3</li>
 </ul>
 <blockquote>
 <ul class="simple">
-<li>レベル3</li>
+<li>レベル3-2</li>
 </ul>
 </blockquote>
 </blockquote>
@@ -184,8 +189,8 @@ Formatterプラグインを利用したWiki文法のマニュアルです。reSt
 </tr>
 </tbody>
 </table>
+箇条書きは*,-,+が使えます。*の後ろに空白を入れてください。また、箇条書きのレベルが変わる箇所には空行を入れてください。
 
-箇条書きは*,-,+が使えます。*の後ろに空白を入れてください。また、箇条書き箇条書きの間には空行を入れてください。
 <hr />
 <h2 id="order">項番</h2>
 <table width="90%">
@@ -201,6 +206,7 @@ Formatterプラグインを利用したWiki文法のマニュアルです。reSt
 #. りんご(項号の自動付与)
 
 #. なし
+   (改行のテスト)
 
 #. ぶどう
 
@@ -219,7 +225,7 @@ Formatterプラグインを利用したWiki文法のマニュアルです。reSt
 </ol>
 <ol class="arabic simple" start="2">
 <li>りんご(項番の指定)</li>
-<li>なし</li>
+<li>なし (改行のテスト)</li>
 <li>ぶどう(前の番号の通番を自動付与)</li>
 </ol>
 </td>
@@ -228,7 +234,7 @@ Formatterプラグインを利用したWiki文法のマニュアルです。reSt
 </table>
 
 
-項番は、「#.」を先頭につけます。コンマとコンマの後ろの空白を忘れないようにしてください。また、項目と項目の間には、空行が必要です。明示的に項番を指定したい場合は、「2.」のように書きます。
+項番は、「#.」を先頭につけます。コンマとコンマの後ろの空白を忘れないようにしてください。また、項目と項目の間には、空行が必要です。明示的に項番を指定したい場合は「2.」のように書きます。改行した直後の文字は前の行の続きとみなされます。
 
 <b>表示イメージ</b>
 <hr />
@@ -366,7 +372,6 @@ Wikiへのリンク         [[WikiName]]
 </pre>
 </td>
 <td>
-
 <table border="1" class="docutils">
 <colgroup>
 <col width="34%" />
@@ -403,6 +408,43 @@ Wikiへのリンク         [[WikiName]]
   </tr>
   <tr><td><strong>4行目</strong></td>
   </tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td>
+<pre>  
+============  ==========  ==========
+ヘッダー1     ヘッダー2   ヘッダー3    
+============  ==========  ==========
+1行目         2列目       3列目
+2行目         セルの結合(横)
+============  ======================
+</pre>
+</td>
+<td>
+<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="31%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">ヘッダー1</th>
+<th class="head">ヘッダー2</th>
+<th class="head">ヘッダー3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>1行目</td>
+<td>2列目</td>
+<td>3列目</td>
+</tr>
+<tr><td>2行目</td>
+<td colspan="2">セルの結合(横)</td>
+</tr>
 </tbody>
 </table>
 </td>
